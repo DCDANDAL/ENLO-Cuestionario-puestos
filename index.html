@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario de Puestos y Funciones - ENLO</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 850px; background: #fff; margin: auto; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #003366; text-align: center; margin-bottom: 5px; font-size: 1.6em; }
+        p.subtitle { text-align: center; color: #666; margin-bottom: 30px; font-size: 0.95em; }
+        .section-title { background: #003366; color: white; padding: 10px 15px; border-radius: 4px; font-size: 1.1em; margin-top: 25px; margin-bottom: 15px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: 600; margin-bottom: 5px; color: #444; }
+        input[type="text"], textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 14px; }
+        textarea { resize: vertical; min-height: 70px; }
+        button { background-color: #28a745; color: white; border: none; padding: 14px 20px; font-size: 16px; border-radius: 4px; cursor: pointer; width: 100%; font-weight: bold; margin-top: 20px; }
+        button:hover { background-color: #218838; }
+        .status { text-align: center; font-weight: bold; margin-top: 15px; display: none; padding: 12px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>CUESTIONARIO PARA EL LEVANTAMIENTO DEL MANUAL DE PUESTOS Y FUNCIONES</h1>
+    <p class="subtitle">Empresa ENLO | Responde únicamente a los campos que apliquen a tu puesto de trabajo.</p>
+
+    <form id="puestosForm">
+        
+        <div class="section-title">1. DATOS GENERALES Y OBJETIVO</div>
+        <div class="form-group"><label>Nombre completo:</label><input type="text" name="nombre"></div>
+        <div class="form-group"><label>Nombre de tu Puesto:</label><input type="text" name="puesto"></div>
+        <div class="form-group"><label>Área / Departamento:</label><input type="text" name="area"></div>
+        <div class="form-group"><label>Objetivo del Puesto (Razón de ser e impacto directo):</label><textarea name="objetivo"></textarea></div>
+        <div class="form-group"><label>Yo reporto a (puesto de tu jefe directo):</label><input type="text" name="reporto_a"></div>
+        <div class="form-group"><label>Me reportan a mí (puestos a tu cargo):</label><input type="text" name="me_reportan"></div>
+        <div class="form-group"><label>En caso de ausencia, ¿quién asume sus funciones principales?:</label><input type="text" name="sustituto"></div>
+        <div class="form-group"><label>¿A qué otro puesto cubre cuando dicho colaborador se ausenta?:</label><input type="text" name="cubre_a"></div>
+        <div class="form-group"><label>Modalidad de trabajo (Presencial / Home Office / Híbrido):</label><input type="text" name="modalidad"></div>
+        <div class="form-group"><label>Tipo de contratación y Jornada (Tiempo completo, medio tiempo, turno, etc.):</label><input type="text" name="jornada"></div>
+
+        <div class="section-title">2. ACTIVIDADES COTIDIANAS Y FRECUENCIA</div>
+        <div class="form-group"><label>Actividades Diarias:</label><textarea name="act_diarias"></textarea></div>
+        <div class="form-group"><label>Actividades Semanales / Quincenales / Mensuales / Por Solicitud:</label><textarea name="act_periodicas"></textarea></div>
+        <div class="form-group"><label>Actividades de Cierre Mensual o Apoyo:</label><textarea name="act_cierre"></textarea></div>
+        <div class="form-group"><label>Decisiones que toma de forma autónoma:</label><textarea name="decisiones_auto"></textarea></div>
+        <div class="form-group"><label>Decisiones que requieren autorización de su jefe inmediato:</label><textarea name="decisiones_jefe"></textarea></div>
+
+        <div class="section-title">3. RESPONSABILIDADES</div>
+        <div class="form-group"><label>Administrativas (Planea / Supervisa / Ejecuta / Coordina / Evalúa):</label><input type="text" name="resp_admin"></div>
+        <div class="form-group"><label>Manejo de Información:</label><input type="text" name="manejo_info"></div>
+        <div class="form-group"><label>¿Tu labor analiza, concentra o genera información?:</label><input type="text" name="analiza_info"></div>
+        <div class="form-group"><label>¿Manejas Información Financiera? (Sí / No):</label><input type="text" name="info_financiera"></div>
+        <div class="form-group"><label>¿Manejas Información Confidencial? (Sí / No):</label><input type="text" name="info_confidencial"></div>
+        <div class="form-group"><label>Responsabilidad Económica:</label><input type="text" name="resp_economica"></div>
+        <div class="form-group"><label>¿Manejas efectivo directo? (Sí / No):</label><input type="text" name="manejo_efectivo"></div>
+        <div class="form-group"><label>¿Manejas bienes en especie o valores? (Sí / No):</label><input type="text" name="manejo_bienes"></div>
+        <div class="form-group"><label>¿Qué activos asignados utiliza? (Laptop, teléfono institucional, token, etc.):</label><input type="text" name="activos_asignados"></div>
+        <div class="form-group"><label>¿Resguarda papelería sensible / sellos físicos? (Sí / No):</label><input type="text" name="papeleria_sensible"></div>
+
+        <div class="section-title">4. RELACIONES DE TRABAJO</div>
+        <div class="form-group"><label>Internas (Con quiénes te relacionas y para qué):</label><textarea name="relaciones_int"></textarea></div>
+        <div class="form-group"><label>Externas (Clientes, proveedores, dependencias y para qué):</label><textarea name="relaciones_ext"></textarea></div>
+
+        <div class="section-title">5. PARÁMETROS DE EVALUACIÓN Y LISTA DE VERIFICACIÓN</div>
+        <div class="form-group"><label>Parámetros de Evaluación (Frecuencia y métricas):</label><textarea name="evaluacion"></textarea></div>
+        <div class="form-group"><label>Lista de Verificación / Checklist (Hojas de trabajo o reportes periódicos):</label><textarea name="checklist"></textarea></div>
+
+        <div class="section-title">6. PORTALES, PROGRAMAS Y SERVIDORES</div>
+        <div class="form-group"><label>Portales Web que utilizas (SAT, eZaudita, etc.):</label><input type="text" name="portales"></div>
+        <div class="form-group"><label>Programas / Software de Trabajo (COI, Excel, etc.):</label><input type="text" name="software"></div>
+        <div class="form-group"><label>Servidor - ¿Qué información CONSULTAS en el servidor?:</label><textarea name="servidor_consulta"></textarea></div>
+        <div class="form-group"><label>Servidor - ¿Qué información ABASTECES/SUBES al servidor?:</label><textarea name="servidor_sube"></textarea></div>
+
+        <div class="section-title">7. INFORMACIÓN CONFIDENCIAL Y ACCESOS</div>
+        <div class="form-group"><label>Accesos / Claves a tu cargo (FIEL, CIEC, contraseñas):</label><textarea name="accesos"></textarea></div>
+        <div class="form-group"><label>Datos Sensibles que manejas (Estados de cuenta, datos financieros):</label><textarea name="datos_sensibles"></textarea></div>
+
+        <div class="section-title">8. PERFIL Y CONOCIMIENTOS REQUERIDOS</div>
+        <div class="form-group"><label>Formación Académica - Grado (Bachillerato, Licenciatura, Posgrado, etc.):</label><input type="text" name="grado_acad"></div>
+        <div class="form-group"><label>Área de Especialidad o Carrera:</label><input type="text" name="area_especialidad"></div>
+        <div class="form-group"><label>Idiomas y porcentaje de dominio:</label><input type="text" name="idiomas"></div>
+        <div class="form-group"><label>Conocimientos Técnicos / Software y Nivel:</label><textarea name="conocimientos_tec"></textarea></div>
+        <div class="form-group"><label>Experiencia Previa requerida (Tiempo en puestos similares):</label><input type="text" name="experiencia"></div>
+        <div class="form-group"><label>Habilidades Competenciales (5 a 10 habilidades principales):</label><textarea name="habilidades"></textarea></div>
+
+        <div class="section-title">9. ESFUERZOS Y CONDICIONES DE TRABAJO</div>
+        <div class="form-group"><label>Esfuerzo Mental (Análisis continuo, toma de decisiones rápidas, etc.):</label><input type="text" name="esfuerzo_mental"></div>
+        <div class="form-group"><label>Esfuerzo Físico / Levantamiento de carga (Sí / No):</label><input type="text" name="esfuerzo_fisico"></div>
+        <div class="form-group"><label>Presión de Tiempo (Cíclica o Permanente):</label><input type="text" name="presion_tiempo"></div>
+        <div class="form-group"><label>Riesgo Laboral (Sí / No):</label><input type="text" name="riesgo"></div>
+        <div class="form-group"><label>¿Utiliza Equipo de Protección Personal (EPP)? Especificar:</label><input type="text" name="epp"></div>
+        <div class="form-group"><label>Ambiente de Trabajo (Condiciones normales o especiales):</label><input type="text" name="ambiente_trabajo"></div>
+        <div class="form-group"><label>Trabajo frente a pantalla (¿Cuántas horas aprox. al día?):</label><input type="text" name="horas_pantalla"></div>
+        <div class="form-group"><label>Disponibilidad de horario adicional cuando sea necesario (Sí / No):</label><input type="text" name="disponibilidad"></div>
+        <div class="form-group"><label>De acuerdo a tu experiencia y responsabilidades, ¿qué agregarías?:</label><textarea name="comentarios_extra"></textarea></div>
+
+        <button type="button" onclick="enviarFormulario()">Enviar Cuestionario</button>
+        <div id="statusMessage" class="status"></div>
+    </form>
+</div>
+
+<script>
+    // REEMPLAZA ESTA LÍNEA CON LA URL QUE COPIASTE EN EL PASO 2:
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzx6A-o-TSrrGH18g_g0BDKwtHhDcYGko30z6bbeN_P_kRMNS59IOnOiXjULCMQE8MorQ/exec";
+
+    function enviarFormulario() {
+        const form = document.getElementById('puestosForm');
+        const status = document.getElementById('statusMessage');
+        const formData = new FormData(form);
+
+        status.style.display = 'block';
+        status.style.backgroundColor = '#e2e3e5';
+        status.style.color = '#383d41';
+        status.innerText = "Enviando respuestas, por favor espera...";
+
+        fetch(SCRIPT_URL, {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors'
+        })
+        .then(() => {
+            status.style.backgroundColor = '#d4edda';
+            status.style.color = '#155724';
+            status.innerText = "¡Muchas gracias! Tus respuestas han sido guardadas correctamente en la nube.";
+            form.reset();
+        })
+        .catch(error => {
+            status.style.backgroundColor = '#f8d7da';
+            status.style.color = '#721c24';
+            status.innerText = "Ocurrió un error al enviar. Por favor intenta de nuevo.";
+            console.error('Error:', error);
+        });
+    }
+</script>
+
+</body>
+</html>
